@@ -18,9 +18,7 @@ namespace Buddy.Integration.Tests.Fixtures
 
         private void SetUpClient()
         {
-            _server = new TestServer(new WebHostBuilder()
-                .UseStartup<Startup>());
-
+            _server = new TestServer(new WebHostBuilder().UseStartup<Startup>());
             Client = _server.CreateClient();
         }
 
